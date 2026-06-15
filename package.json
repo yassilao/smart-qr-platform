@@ -1,0 +1,27 @@
+{
+  "name": "smart-qr-platform",
+  "version": "1.0.0",
+  "description": "Production-grade Smart QR Learning & Assessment Platform",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "apps/backend",
+    "packages/shared",
+    "packages/db"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn workspace @smart-qr/backend dev\" \"yarn workspace @smart-qr/web dev\"",
+    "build": "yarn workspaces foreach run build",
+    "start": "yarn workspaces foreach run start",
+    "test": "yarn workspaces foreach run test",
+    "lint": "yarn workspaces foreach run lint",
+    "db:migrate": "yarn workspace @smart-qr/db migrate",
+    "db:seed": "yarn workspace @smart-qr/db seed",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
