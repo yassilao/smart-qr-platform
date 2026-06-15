@@ -194,4 +194,4 @@ MIT License - See [LICENSE](./LICENSE) file for details.
 
 ## 📞 Support
 
-For support, email support@smartqr.com or open an issue in the repository.
+For support, email laouidyassin52@gmail.com or open an issue in the repository.
